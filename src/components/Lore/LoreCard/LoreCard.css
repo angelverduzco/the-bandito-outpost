@@ -1,0 +1,48 @@
+.lore-card {
+  background: rgba(255, 255, 255, 0.05); /* glassmorphism */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.lore-card:hover {
+  transform: translateY(-5px);
+}
+
+.lore-card-ally:hover {
+  border-color: #FCE300;
+  box-shadow: 0 8px 20px rgba(252, 227, 0, 0.15);
+}
+
+.lore-card-villain:hover {
+  border-color: #E03C31;
+  box-shadow: 0 8px 20px rgba(224, 60, 49, 0.2);
+}
+
+.lore-card-location:hover,
+.lore-card-concept:hover,
+.lore-card-symbol:hover,
+.lore-card-event:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lore-card-title {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.lore-card-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}

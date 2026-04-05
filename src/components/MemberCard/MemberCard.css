@@ -1,73 +1,80 @@
 .member-card {
     display: flex;
     align-items: center;
+    background: rgba(40, 40, 40, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 900px;
+    margin: 0 auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+.member-card-img {
+    aspect-ratio: 1/1;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .member-card-info {
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
-}
-
-.member-card-img {
-    aspect-ratio: 1/1;
-    height: 350px;
-    border-radius: 15px;
+    margin-left: 40px;
 }
 
 .member-card-name {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    margin-top: 0;
+    font-size: 2.8rem;
+    margin: 0 0 5px 0;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .member-card-role {
-    font-size: 28px;
-    margin: 0;
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
     color: #CD8888;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .member-card-desc {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1028px) {
     .member-card {
         flex-direction: column;
+        padding: 20px;
+        text-align: center;
     }
-
     .member-card-img {
         height: 250px;
+        margin-bottom: 20px;
     }
-
-    .member-card-name {
-        margin-top: 1rem;
-        font-size: 2rem;
+    .member-card-info {
+        margin-left: 0;
     }
-
-    .member-card-role {
-        font-size: 1.5rem;
-    }
-
-    .member-card-desc {
-        font-size: 1.1rem;
-    }
+    .member-card-name { font-size: 2.2rem; }
+    .member-card-role { font-size: 1.2rem; }
 }
 
-@media (max-width: 950px) {
-    .member-card-img {
-        height: 200px;
-    }
-
-    .member-card-name {
-        font-size: 1.75rem;
-    }
-
-    .member-card-role {
-        font-size: 1.25rem;
-    }
-
-    .member-card-desc {
-        font-size: 1rem;
-    }
+@media (max-width: 768px) {
+    .member-card-img { height: 200px; }
+    .member-card-name { font-size: 1.8rem; }
+    .member-card-role { font-size: 1rem; }
+    .member-card-desc { font-size: 1rem; }
 }

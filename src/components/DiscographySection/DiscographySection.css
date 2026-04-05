@@ -1,38 +1,92 @@
 .discography-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin: 3rem auto 5rem auto;
+    max-width: 1500px;
+    padding: 0 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.discography-section-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 30px;
-    padding: 30px;
-    background-color: #5a5757;
-    border-radius: 15px;
-    width: 90%;
+    margin-bottom: 2.5rem;
+    padding: 0 30px;
 }
 
 .discography-section-title {
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 30px;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: capitalize;
 }
 
-.discography-section-cards {
+.discography-section-controls {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(203, 82, 82, 0.8);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(203, 82, 82, 0.5);
+}
+
+.discography-carousel-container {
+    display: flex;
+    gap: 3.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 40px;
+    scroll-behavior: smooth;
+    padding: 30px 40px 60px 40px;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    box-sizing: border-box;
 }
 
-@media (width <= 1028px) {
-    .discography-section {
-        width: 80%;
-    }
+.discography-carousel-container::-webkit-scrollbar {
+    display: none;
+}
 
-    .discography-section-title {
-        font-size: 2rem;
-    }
+.discography-carousel-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
-    .discography-section-cards {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.carousel-item {
+    scroll-snap-align: start;
+    flex: 0 0 300px;
+}
+
+@media (max-width: 1028px) {
+    .discography-section-header {
+        flex-direction: column;
+        gap: 1.5rem;
     }
+}
+
+@media (max-width: 768px) {
+    .discography-section { margin: 2rem auto 2rem auto; }
+    .discography-section-title { font-size: 2.2rem; }
+    .carousel-item { flex: 0 0 240px; }
+    .discography-carousel-container { gap: 1.5rem; }
 }

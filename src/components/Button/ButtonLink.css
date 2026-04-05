@@ -1,19 +1,26 @@
 .button {
-    font-size: 25px;
-    background-color: #2a2a2a;
-    border: none;
-    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #cb5252, #8f2929);
+    border: 2px solid transparent;
+    border-radius: 50px;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 45px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin-top: 25px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    box-shadow: 0 10px 25px rgba(203, 82, 82, 0.4);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .button:hover {
-    background-color: #e34039;
-    color: #fce51d;
+    background: transparent;
+    border: 2px solid #cb5252;
+    color: #cb5252;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(203, 82, 82, 0.2);
 }

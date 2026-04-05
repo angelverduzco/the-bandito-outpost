@@ -6,13 +6,11 @@ import "./HomePage.css";
 
 export function HomePage() {
   return (
-    <>
-      <main className="home-page">
-        <Banner />
-        <BandSection />
-        <MembersSection />
-        <AlbumsSection />
-      </main>
-    </>
+    <main className="home-page">
+      <Banner />
+      <BandSection />
+      <MembersSection />
+      <AlbumsSection />
+    </main>
   );
 }

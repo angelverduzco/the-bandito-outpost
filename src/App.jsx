@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/discography" element={<DiscographyPage />} />
-          <Route path="/discography/:type/:id" element={<AlbumPage />} />
+          <Route path="/discography/:type/:albumName" element={<AlbumPage />} />
           <Route path="/tour" element={<TourPage />} />
           <Route path="/lore" element={<LorePage />} />
         </Routes>

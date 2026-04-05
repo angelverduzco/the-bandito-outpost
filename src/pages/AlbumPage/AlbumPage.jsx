@@ -1,29 +1,30 @@
 import { AlbumBanner } from "../../components/AlbumBanner/AlbumBanner";
 import { useParams } from "react-router";
-import useDiscography from "../../hooks/useDiscography";
+
 import "./AlbumPage.css";
 import { Tracklist } from "../../components/Tracklist/Tracklist";
 import { AlbumOptions } from "../../components/AlbumOptions/AlbumOptions";
 import { useEffect } from "react";
+import { ALBUMS, LIVE_ALBUMS, EXTENDED_PLAYS, SINGLES } from "../../data";
 
 export function AlbumPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const discography = useDiscography();
-
-  const { type, id } = useParams();
+  const { type, albumName } = useParams();
 
   const dataMap = {
-    albums: discography.ALBUMS,
-    "live-albums": discography.LIVE_ALBUMS,
-    "extended-plays": discography.EXTENDED_PLAYS,
-    singles: discography.SINGLES,
+    albums: ALBUMS,
+    "live-albums": LIVE_ALBUMS,
+    "extended-plays": EXTENDED_PLAYS,
+    singles: SINGLES,
   };
 
   const dataset = dataMap[type] || [];
-  const album = dataset.find((a) => a.id === Number(id));
+  const album = dataset.find(
+    (a) => a.name.toLowerCase().replace(/\s+/g, "-") === albumName,
+  );
 
   if (!album) {
     return <p>Album not found</p>;
