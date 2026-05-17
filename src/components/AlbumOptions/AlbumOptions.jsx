@@ -1,3 +1,4 @@
+import { getAssetUrl } from "../../utils/assets";
 import "./AlbumOptions.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpotify, faApple } from "@fortawesome/free-brands-svg-icons";
@@ -7,7 +8,7 @@ export function AlbumOptions({ album }) {
     <aside className="album-options">
       <img
         className="album-options-img"
-        src={album.cover}
+        src={getAssetUrl(album.cover)}
         alt={`${album.name} cover`}
       />
       {album.links.spotify && (

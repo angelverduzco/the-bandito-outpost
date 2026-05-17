@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { getAssetUrl } from "../../utils/assets";
 import "./AlbumCard.css";
 
 export function AlbumCard({ album, route }) {
@@ -16,7 +17,7 @@ export function AlbumCard({ album, route }) {
       <div className="album-card-img-wrapper">
         <img
           className="album-card-img"
-          src={album.cover}
+          src={getAssetUrl(album.cover)}
           alt={`${album.name}'s cover`}
         />
       </div>

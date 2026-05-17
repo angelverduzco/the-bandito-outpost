@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { CONCERTS } from "../../data";
 import ConcertCard from "../../components/ConcertCard/ConcertCard";
+import concertHeroImg from "../../assets/concert.webp";
 import "./TourPage.css";
 
 export default function TourPage() {
@@ -21,7 +22,10 @@ export default function TourPage() {
           setConcerts(CONCERTS);
         }
       } catch (error) {
-        console.warn("Tour dates API fetch failed, falling back to static list:", error);
+        console.warn(
+          "Tour dates API fetch failed, falling back to static list:",
+          error,
+        );
         setConcerts(CONCERTS);
       } finally {
         setLoading(false);
@@ -33,20 +37,38 @@ export default function TourPage() {
 
   return (
     <main className="tour-page">
-      <h1 className="tour-title">The Clancy Tour: Breach</h1>
-      
-      {loading ? (
-        <div className="tour-loading-container">
-          <div className="tour-spinner"></div>
-          <p>Loading upcoming tour dates...</p>
+      <div className="tour-hero">
+        <div className="tour-hero-overlay"></div>
+        <img
+          src={concertHeroImg}
+          alt="Twenty One Pilots Live Concert"
+          className="tour-hero-img"
+        />
+        <div className="tour-hero-content">
+          <h1 className="tour-hero-title">TOURING DATES</h1>
+          <p className="tour-hero-desc">
+            Experience the tour that everyone is talking about live on stage.
+          </p>
         </div>
-      ) : (
-        <section className="tour-dates">
-          {concerts.map((concert, index) => (
-            <ConcertCard concert={concert} key={concert.date + "-" + index} />
-          ))}
-        </section>
-      )}
+      </div>
+
+      <div className="tour-content-container">
+        <h2 className="tour-section-title">UPCOMING SHOWS</h2>
+        <div className="tour-section-divider"></div>
+
+        {loading ? (
+          <div className="tour-loading-container">
+            <div className="tour-spinner"></div>
+            <p>Loading upcoming tour dates...</p>
+          </div>
+        ) : (
+          <section className="tour-grid">
+            {concerts.map((concert, index) => (
+              <ConcertCard concert={concert} key={concert.date + "-" + index} />
+            ))}
+          </section>
+        )}
+      </div>
     </main>
   );
 }

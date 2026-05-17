@@ -1,3 +1,4 @@
+import { getAssetUrl } from "../../utils/assets";
 import "./AlbumBanner.css";
 import { Link } from "react-router";
 
@@ -5,7 +6,7 @@ export function AlbumBanner({ album }) {
   return (
     <section
       className="album-banner"
-      style={{ backgroundImage: `url(${album.cover})` }}
+      style={{ backgroundImage: `url(${getAssetUrl(album.cover)})` }}
     >
       <Link
         className="album-banner-btn"
