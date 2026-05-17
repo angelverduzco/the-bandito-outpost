@@ -92,4 +92,163 @@
   .lore-section-title {
     font-size: 2.2rem;
   }
+  .lore-source-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .lore-source-card::before {
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Source & Credits Card Styling */
+.lore-source-section {
+  margin-top: 8rem;
+}
+
+.lore-source-card {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lore-source-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #FCE300, #E03C31);
+  transition: width 0.3s ease;
+}
+
+.lore-source-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(252, 227, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(252, 227, 0, 0.15);
+}
+
+.lore-source-icon {
+  background: rgba(255, 69, 0, 0.1);
+  color: #ff4500;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.2);
+}
+
+.lore-source-card:hover .lore-source-icon {
+  transform: scale(1.1) rotate(10deg);
+  background: rgba(255, 69, 0, 0.2);
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.4);
+}
+
+.lore-source-content {
+  flex-grow: 1;
+}
+
+.lore-source-content h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.lore-source-content p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.lore-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FCE300;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(252, 227, 0, 0.3);
+  border-radius: 6px;
+  background: rgba(252, 227, 0, 0.05);
+}
+
+.lore-source-link:hover {
+  background: #FCE300;
+  color: #000;
+  box-shadow: 0 0 15px rgba(252, 227, 0, 0.4);
+  border-color: #FCE300;
+}
+
+/* Scroll Reveal Animations */
+.lore-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lore-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lore-section-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.lore-section.is-visible .lore-section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered entry for cards in grids when section becomes visible */
+.lore-section.is-visible .lore-grid > * {
+  animation: cardFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Apply staggered delays for up to 8 cards */
+.lore-section.is-visible .lore-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.lore-section.is-visible .lore-grid > *:nth-child(2) { animation-delay: 0.18s; }
+.lore-section.is-visible .lore-grid > *:nth-child(3) { animation-delay: 0.26s; }
+.lore-section.is-visible .lore-grid > *:nth-child(4) { animation-delay: 0.34s; }
+.lore-section.is-visible .lore-grid > *:nth-child(5) { animation-delay: 0.42s; }
+.lore-section.is-visible .lore-grid > *:nth-child(6) { animation-delay: 0.5s; }
+.lore-section.is-visible .lore-grid > *:nth-child(7) { animation-delay: 0.58s; }
+.lore-section.is-visible .lore-grid > *:nth-child(8) { animation-delay: 0.66s; }
+
+@keyframes cardFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

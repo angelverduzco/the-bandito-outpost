@@ -1,5 +1,5 @@
 import "./LoreHero.css";
-import demaImg from "../../../assets/lore/dema.jpg";
+import demaImg from "../../../assets/lore-hero.jpg";
 
 export function LoreHero() {
   return (

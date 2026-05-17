@@ -32,6 +32,9 @@ export function Footer() {
           />
         </a>
       </div>
+      <p className="footer-disclaimer">
+        Disclaimer: This is a non-profit fan website. All content, characters, and storylines mentioned on this site are property and copyright of Twenty One Pilots and their respective owners. No copyright infringement is intended.
+      </p>
     </footer>
   );
 }

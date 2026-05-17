@@ -20,3 +20,34 @@
     align-items: center;
   }
 }
+
+/* Loading & Spinner Styling */
+.tour-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tour-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(252, 227, 0, 0.15);
+  border-top-color: #FCE300; /* Bandito Yellow */
+  border-right-color: #E03C31; /* Bishop Red */
+  border-radius: 50%;
+  animation: tourSpin 1s cubic-bezier(0.53, 0.21, 0.29, 0.86) infinite;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 25px rgba(252, 227, 0, 0.2);
+}
+
+@keyframes tourSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
