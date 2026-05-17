@@ -30,3 +30,13 @@
 .footer-icon:hover {
     cursor: pointer;
 }
+
+.footer-disclaimer {
+    color: rgba(13, 13, 13, 0.7);
+    font-size: 13px;
+    max-width: 700px;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5;
+    padding: 0 20px;
+}

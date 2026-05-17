@@ -1,20 +1,50 @@
+import { useEffect } from "react";
 import "./LorePage.css";
 import { LoreHero } from "../../components/Lore/LoreHero/LoreHero";
 import { LoreCard } from "../../components/Lore/LoreCard/LoreCard";
 import { StoryTimeline } from "../../components/Lore/StoryTimeline/StoryTimeline";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReddit } from "@fortawesome/free-brands-svg-icons";
 
 import { allies } from "../../data/lore/allies";
 import { villains } from "../../data/lore/villains";
 import { locations } from "../../data/lore/locations";
 import { concepts } from "../../data/lore/concepts";
-import { events } from "../../data/lore/events";
 import { symbolsAndArtifacts } from "../../data/lore/symbolsAndArtifacts";
 import { storyTimeline } from "../../data/lore/storyline";
 
-import banditoImg from "../../assets/lore/banditos.jpg";
-import bishopImg from "../../assets/lore/bishop.webp";
+import banditoImg from "../../assets/lore/allies/banditos.jpg";
+import bishopImg from "../../assets/lore/villains/bishop.webp";
 
 export default function LorePage() {
+  useEffect(() => {
+    const sections = document.querySelectorAll(".lore-section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+        rootMargin: "0px 0px -80px 0px",
+      },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <main className="lore-page">
       <LoreHero />
@@ -95,12 +125,31 @@ export default function LorePage() {
           </div>
         </section>
 
-        <section className="lore-section" id="events">
-          <h2 className="lore-section-title">Notable Events</h2>
-          <div className="lore-grid">
-            {events.map((ev, i) => (
-              <LoreCard key={i} item={ev} type="event" />
-            ))}
+        {/* Source & Credits Section */}
+        <section className="lore-section lore-source-section" id="sources">
+          <h2 className="lore-section-title">Credits & Sources</h2>
+          <div className="lore-source-card">
+            <div className="lore-source-icon">
+              <FontAwesomeIcon icon={faReddit} size="2x" />
+            </div>
+            <div className="lore-source-content">
+              <h3>Original Lore Compilation</h3>
+              <p>
+                The storylines, character roles, and historical timeline
+                represented on this fan page are adapted from the incredible,
+                detailed compilation by <strong>u/gooooooodboah</strong> and the
+                Reddit fan community. You can read the original full analysis
+                and participate in the discussion here:
+              </p>
+              <a
+                href="https://www.reddit.com/r/twentyonepilots/comments/18nj865/an_updated_and_detailed_explanation_of_the_lore/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lore-source-link"
+              >
+                <span>Read the full Reddit guide</span>
+              </a>
+            </div>
           </div>
         </section>
       </div>
