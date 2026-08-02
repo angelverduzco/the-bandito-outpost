@@ -4,39 +4,71 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #CB5252;
-    padding-bottom: 20px;
+    background: linear-gradient(180deg, #cb5252 0%, #9e2a2a 100%);
+    border-top: 3px solid #FCE300; /* Bandito Yellow Line */
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    padding: 1.75rem 2rem 1.25rem 2rem;
+    box-sizing: border-box;
+}
+
+.footer-text {
+    font-family: 'Oswald', sans-serif;
+    color: #0D0D0D;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    margin: 0 0 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.footer-text:hover {
+    color: #ffffff;
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100px;
+    gap: 1.2rem;
+    margin-bottom: 0.75rem;
 }
 
-.footer-text {
-    color: #0D0D0D;
-    font-weight: bold;
-    font-size: 20px;
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(13, 13, 13, 0.1);
+    border: 1px solid rgba(13, 13, 13, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    background: #0D0D0D;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(13, 13, 13, 0.4);
+}
+
+.footer-link:hover .footer-icon {
+    color: #FCE300;
 }
 
 .footer-icon {
-    width: 40px;
-    height: 40px;
-    justify-content: space-between;
-}
-
-.footer-icon:hover {
-    cursor: pointer;
+    font-size: 1.2rem;
+    color: #0D0D0D;
+    transition: color 0.3s ease;
 }
 
 .footer-disclaimer {
-    color: rgba(13, 13, 13, 0.7);
-    font-size: 13px;
-    max-width: 700px;
+    color: rgba(13, 13, 13, 0.6);
+    font-size: 0.75rem;
+    max-width: 800px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 0.75rem;
     line-height: 1.5;
-    padding: 0 20px;
+    border-top: 1px solid rgba(13, 13, 13, 0.15);
+    padding: 0.75rem 20px 0 20px;
 }

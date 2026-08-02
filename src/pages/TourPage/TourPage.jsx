@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { CONCERTS } from "../../data";
 import ConcertCard from "../../components/ConcertCard/ConcertCard";
 import concertHeroImg from "../../assets/concert.webp";
 import "./TourPage.css";
@@ -7,31 +6,31 @@ import "./TourPage.css";
 export default function TourPage() {
   const [concerts, setConcerts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  async function fetchTourDates() {
+    setLoading(true);
+    setError(false);
+    try {
+      const response = await fetch("/api/tour");
+      if (!response.ok) {
+        throw new Error("Failed to fetch tour dates from Vercel function");
+      }
+      const data = await response.json();
+      if (Array.isArray(data) && data.length > 0) {
+        setConcerts(data);
+      } else {
+        throw new Error("No concert data received");
+      }
+    } catch (err) {
+      console.warn("Tour dates API fetch failed:", err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
-    async function fetchTourDates() {
-      try {
-        const response = await fetch("/api/tour");
-        if (!response.ok) {
-          throw new Error("Failed to fetch tour dates from Vercel function");
-        }
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          setConcerts(data);
-        } else {
-          setConcerts(CONCERTS);
-        }
-      } catch (error) {
-        console.warn(
-          "Tour dates API fetch failed, falling back to static list:",
-          error,
-        );
-        setConcerts(CONCERTS);
-      } finally {
-        setLoading(false);
-      }
-    }
-
     fetchTourDates();
   }, []);
 
@@ -60,6 +59,15 @@ export default function TourPage() {
           <div className="tour-loading-container">
             <div className="tour-spinner"></div>
             <p>Loading upcoming tour dates...</p>
+          </div>
+        ) : error ? (
+          <div className="tour-error-container">
+            <p className="tour-error-message">
+              No se pudieron recuperar los conciertos en este momento.
+            </p>
+            <button className="tour-retry-btn" onClick={fetchTourDates}>
+              Intentar de nuevo
+            </button>
           </div>
         ) : (
           <section className="tour-grid">

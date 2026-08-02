@@ -16,7 +16,6 @@ export function Footer() {
           <FontAwesomeIcon
             className="footer-icon"
             icon={faGithub}
-            style={{ color: "#0D0D0D" }}
           />
         </a>
         <a
@@ -28,7 +27,6 @@ export function Footer() {
           <FontAwesomeIcon
             className="footer-icon"
             icon={faLinkedin}
-            style={{ color: "#0D0D0D" }}
           />
         </a>
       </div>
