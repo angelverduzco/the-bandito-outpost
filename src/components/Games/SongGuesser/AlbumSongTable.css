@@ -1,0 +1,174 @@
+.song-album {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(40, 40, 40, 0.42);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+}
+
+.song-album-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(203, 82, 82, 0.12), transparent 65%);
+}
+
+.song-album-cover {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.song-album-info {
+    min-width: 0;
+}
+
+.song-album-title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.song-album-meta {
+    margin: 0.15rem 0 0 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.song-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.song-table-header {
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.song-table-header th {
+    padding: 0.45rem 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.song-table-header th:first-child {
+    width: 2.25rem;
+}
+
+.song-table-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.055);
+    transition: background-color 0.2s ease;
+}
+
+.song-table-row:hover {
+    background-color: rgba(255, 255, 255, 0.035);
+}
+
+.song-table-row--found {
+    background-color: rgba(252, 227, 0, 0.055);
+}
+
+.song-table-row--found:hover {
+    background-color: rgba(252, 227, 0, 0.09);
+}
+
+.song-table-row--missed {
+    background-color: rgba(224, 60, 49, 0.07);
+}
+
+.song-table-row--missed:hover {
+    background-color: rgba(224, 60, 49, 0.11);
+}
+
+.song-table-row td {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.84rem;
+}
+
+.song-table-number {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.song-table-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: 0;
+    color: rgba(255, 255, 255, 0.28);
+    letter-spacing: 0.2px;
+}
+
+.song-table-row--found .song-table-title {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.song-table-row--missed .song-table-title {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: line-through;
+    text-decoration-color: rgba(224, 60, 49, 0.7);
+}
+
+.song-table-status {
+    flex: 0 0 auto;
+    width: 0.85rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.song-table-status--found {
+    color: #FCE300;
+}
+
+.song-table-status--missed {
+    color: #E03C31;
+}
+
+.song-table-status--hidden {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.song-table-masked {
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+    .song-album-header {
+        padding: 0.75rem 0.9rem;
+    }
+
+    .song-album-cover {
+        width: 40px;
+        height: 40px;
+    }
+
+    .song-album-title {
+        font-size: 1rem;
+    }
+
+    .song-table-header th {
+        padding: 0.4rem 0.75rem;
+    }
+
+    .song-table-row td {
+        padding: 0.35rem 0.75rem;
+    }
+}
