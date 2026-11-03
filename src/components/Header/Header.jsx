@@ -10,6 +10,7 @@ export function Header() {
     { name: "Discography", path: "/discography" },
     { name: "Tour", path: "/tour" },
     { name: "Lore", path: "/lore" },
+    { name: "Games", path: "/games" },
   ];
 
   const toggleMenu = () => {

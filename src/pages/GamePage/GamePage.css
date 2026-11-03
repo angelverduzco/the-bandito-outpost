@@ -1,0 +1,137 @@
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.game-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55vh;
+    min-height: 380px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+}
+
+.game-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5rem 3rem 1.5rem;
+    background: linear-gradient(to bottom, rgba(28, 28, 28, 0.25), #1c1c1c);
+}
+
+.game-hero-title {
+    position: relative;
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.game-hero-subtitle {
+    position: relative;
+    max-width: 680px;
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.game-content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 4rem 2rem 8rem 2rem;
+    box-sizing: border-box;
+}
+
+.game-coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.75), rgba(20, 20, 20, 0.9));
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.game-status-badge {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(252, 227, 0, 0.55);
+    border-radius: 999px;
+    background: rgba(13, 13, 13, 0.65);
+    color: #FCE300;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.game-coming-soon-title {
+    margin: 1.5rem 0 1rem 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.game-coming-soon-text {
+    max-width: 520px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 1028px) {
+    .game-hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-hero {
+        height: 50vh;
+        min-height: 320px;
+    }
+
+    .game-hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .game-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .game-content-container {
+        padding: 3rem 1.5rem 5rem 1.5rem;
+    }
+
+    .game-coming-soon {
+        padding: 3rem 1.5rem;
+    }
+
+    .game-coming-soon-title {
+        font-size: 1.8rem;
+    }
+}
