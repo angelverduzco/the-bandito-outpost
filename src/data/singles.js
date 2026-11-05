@@ -9,8 +9,8 @@ export const SINGLES = [
     color: "#591914",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/22uQ3YSLjQJPNPkZQzdX2y?si=0SmksbHqSie4Wr-VxqvSsw",
-      appleMusic: "https://music.apple.com/mx/album/cancer-single/1152679154",
+        "https://open.spotify.com/album/22uQ3YSLjQJPNPkZQzdX2y?si=0SmksbHqSie4Wr-VxqvSsw",
+      appleMusic: "https://music.apple.com/us/album/cancer-single/1152679154",
     },
     tracks: [
       {
@@ -30,8 +30,8 @@ export const SINGLES = [
     color: "#D90404",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/3J8W9AOjQhnBLCX33m3atT?si=JJ3DUnXcSzKX2VE6lFSiCA",
-      appleMusic: "https://music.apple.com/mx/song/heathens/1125281487",
+        "https://open.spotify.com/album/3J8W9AOjQhnBLCX33m3atT?si=JJ3DUnXcSzKX2VE6lFSiCA",
+      appleMusic: "https://music.apple.com/us/song/heathens/1125281487",
     },
     tracks: [
       {
@@ -51,9 +51,9 @@ export const SINGLES = [
     color: "#F2E527",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/4h3HXlnt6lryGzGbWmcFuY?si=umvDETTsSwqzzuGTDmiOnA",
+        "https://open.spotify.com/album/4h3HXlnt6lryGzGbWmcFuY?si=umvDETTsSwqzzuGTDmiOnA",
       appleMusic:
-        "https://music.apple.com/mx/album/level-of-concern-single/1507187367",
+        "https://music.apple.com/us/album/level-of-concern-single/1507187367",
     },
     tracks: [
       {
@@ -73,9 +73,9 @@ export const SINGLES = [
     color: "#D94E41",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/5bh5kgZddiyd5ObXOP9Exu?si=LJRN44hqTnCjTfsLIW_qoQ",
+        "https://open.spotify.com/album/5bh5kgZddiyd5ObXOP9Exu?si=LJRN44hqTnCjTfsLIW_qoQ",
       appleMusic:
-        "https://music.apple.com/mx/album/christmas-saves-the-year-single/1543103935",
+        "https://music.apple.com/us/album/christmas-saves-the-year-single/1543103935",
     },
     tracks: [
       {
@@ -95,9 +95,9 @@ export const SINGLES = [
     color: "#D33A35",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/7K7eWZNR5t9UBlrN2ltzLI?si=ZQ5j59thTWuXWsOjr7e5nw",
+        "https://open.spotify.com/album/7K7eWZNR5t9UBlrN2ltzLI?si=ZQ5j59thTWuXWsOjr7e5nw",
       appleMusic:
-        "https://music.apple.com/mx/album/the-craving-single-version-single/1747337609",
+        "https://music.apple.com/us/album/the-craving-single-version-single/1747337609",
     },
     tracks: [
       {
@@ -119,7 +119,7 @@ export const SINGLES = [
       spotify:
         "https://open.spotify.com/album/4aE8ZrEif8MgWvFNIbz8I6?si=imPnVnHoRsyu2xP0WElw1A",
       appleMusic:
-        "https://music.apple.com/mx/song/the-line-from-the-series-arcane-league-of-legends/1767032205",
+        "https://music.apple.com/us/song/the-line-from-the-series-arcane-league-of-legends/1767032205",
     },
     tracks: [
       {

@@ -114,9 +114,9 @@ export const LIVE_ALBUMS = [
     color: "#F25CA2",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/1B61NzknoGqafMfKLY7QtZ?si=hmZHn4HZS_Kl1aYEf4QKGA",
+        "https://open.spotify.com/album/1B61NzknoGqafMfKLY7QtZ?si=hmZHn4HZS_Kl1aYEf4QKGA",
       appleMusic:
-        "https://music.apple.com/mx/album/scaled-and-icy-livestream-version/1596349957",
+        "https://music.apple.com/us/album/scaled-and-icy-livestream-version/1596349957",
     },
     tracks: [
       {
@@ -237,9 +237,9 @@ export const LIVE_ALBUMS = [
     color: "#03318C",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/2kAer61g2HN6upL2zXAjzd?si=U-BxHH6KRHOXiKeVeFTKaA",
+        "https://open.spotify.com/album/2kAer61g2HN6upL2zXAjzd?si=U-BxHH6KRHOXiKeVeFTKaA",
       appleMusic:
-        "https://music.apple.com/mx/album/mtv-unplugged-live/1676235176",
+        "https://music.apple.com/us/album/mtv-unplugged-live/1676235176",
     },
     tracks: [
       {

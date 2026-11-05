@@ -54,7 +54,7 @@ export const EXTENDED_PLAYS = [
     color: "#BAD3D9",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/7MnEKSFLhUPQKACs4MHMsI?si=_52bwUaFRxG5towQdgezcw",
+        "https://open.spotify.com/album/7MnEKSFLhUPQKACs4MHMsI?si=_52bwUaFRxG5towQdgezcw",
       appleMusic:
         "https://music.apple.com/ve/album/three-songs-single/542853930",
     },
@@ -85,7 +85,7 @@ export const EXTENDED_PLAYS = [
       "Released on June 14, 2013, the Migraine EP features the titular track, which delves into themes of mental health and internal struggle. This release continued to build upon the band's growing reputation for combining introspective lyrics with energetic melodies, further solidifying their place in the alternative music scene.",
     color: "#404040",
     links: {
-      spotify: "https://open.spotify.com/intl-es/album/5G6D4TtJZkkvUasxqtBmW8",
+      spotify: "https://open.spotify.com/album/5G6D4TtJZkkvUasxqtBmW8",
       appleMusic: "https://music.apple.com/gb/album/migraine-ep/651405957",
     },
     tracks: [
@@ -126,7 +126,7 @@ export const EXTENDED_PLAYS = [
     color: "#A7BF4E",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/4RTM2aJ9TN4xhk3Qy1DhTV?si=rYhGLQXiSuaX8tKbmnenag",
+        "https://open.spotify.com/album/4RTM2aJ9TN4xhk3Qy1DhTV?si=rYhGLQXiSuaX8tKbmnenag",
       appleMusic: "",
     },
     tracks: [
@@ -177,7 +177,7 @@ export const EXTENDED_PLAYS = [
     color: "#6CC5D9",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/0PNfVonzTdd4i5qH06HleQ?si=HkOnCm8qT5mjgkGVzo82Ig",
+        "https://open.spotify.com/album/0PNfVonzTdd4i5qH06HleQ?si=HkOnCm8qT5mjgkGVzo82Ig",
       appleMusic:
         "https://music.apple.com/gb/album/holding-on-to-you-ep/675288868",
     },
@@ -214,7 +214,7 @@ export const EXTENDED_PLAYS = [
     color: "#F24738",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/3kAeFRFteZe70K20xjC6Rm?si=gbBPL-QhQHOuuTzkAYh6jw",
+        "https://open.spotify.com/album/3kAeFRFteZe70K20xjC6Rm?si=gbBPL-QhQHOuuTzkAYh6jw",
       appleMusic:
         "https://music.apple.com/au/album/quiet-is-vi%C3%B8lent/899652400",
     },
@@ -316,8 +316,8 @@ export const EXTENDED_PLAYS = [
     color: "#4d4d53ff",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/1UIKUO8x3xAkQBnJghN41m?si=gXREv1e-QV6Qw2Sm_0LBLA",
-      appleMusic: "https://music.apple.com/au/album/topxmm-ep/1186097497",
+        "https://open.spotify.com/album/1UIKUO8x3xAkQBnJghN41m?si=gXREv1e-QV6Qw2Sm_0LBLA",
+      appleMusic: "https://music.apple.com/us/album/topxmm-ep/1186097497",
     },
     tracks: [
       {

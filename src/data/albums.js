@@ -9,9 +9,9 @@ export const ALBUMS = [
     color: "#55732E",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/6rgWZP4QFBjEFF0n6JWEOa?si=tOiuubD7Tou4f9u_vd5dxA",
+        "https://open.spotify.com/album/6rgWZP4QFBjEFF0n6JWEOa?si=tOiuubD7Tou4f9u_vd5dxA",
       appleMusic:
-        "https://music.apple.com/mx/album/twenty-one-pilots/1784341970",
+        "https://music.apple.com/us/album/twenty-one-pilots/1784341970",
     },
     tracks: [
       {
@@ -96,7 +96,7 @@ export const ALBUMS = [
     color: "#337C80",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/2pvaY5uQvitGuztVNfsRR8?si=KsyKSfbIT76GDHOyUggjlQ",
+        "https://open.spotify.com/album/2pvaY5uQvitGuztVNfsRR8?si=KsyKSfbIT76GDHOyUggjlQ",
       appleMusic: "",
     },
     tracks: [
@@ -182,8 +182,8 @@ export const ALBUMS = [
     color: "#6B7A8F",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/2r2r78NE05YjyHyVbVgqFn?si=DBtuVZ_KRga1j4ki1R62uA",
-      appleMusic: "https://music.apple.com/mx/album/vessel/585128397",
+        "https://open.spotify.com/album/2r2r78NE05YjyHyVbVgqFn?si=DBtuVZ_KRga1j4ki1R62uA",
+      appleMusic: "https://music.apple.com/us/album/vessel/585128397",
     },
     tracks: [
       {
@@ -258,8 +258,8 @@ export const ALBUMS = [
     color: "#741b1b",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/3cQO7jp5S9qLBoIVtbkSM1?si=Wpi365rSR7GjVhype09yJQ",
-      appleMusic: "https://music.apple.com/mx/album/blurryface/974485462",
+        "https://open.spotify.com/album/3cQO7jp5S9qLBoIVtbkSM1?si=Wpi365rSR7GjVhype09yJQ",
+      appleMusic: "https://music.apple.com/us/album/blurryface/974485462",
     },
     tracks: [
       {
@@ -344,8 +344,8 @@ export const ALBUMS = [
     color: "#eeca3c",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/621cXqrTSSJi1WqDMSLmbL?si=2NIxdVWQRAaT4ta3KG3vVg",
-      appleMusic: "https://music.apple.com/mx/album/trench/1422828208",
+        "https://open.spotify.com/album/621cXqrTSSJi1WqDMSLmbL?si=2NIxdVWQRAaT4ta3KG3vVg",
+      appleMusic: "https://music.apple.com/us/album/trench/1422828208",
     },
     tracks: [
       {
@@ -430,8 +430,8 @@ export const ALBUMS = [
     color: "#f07ba6",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/0Q5XBpCYFgUWiG9DUWyAmJ?si=8aN0uah1QTuH5BaLuFb4dA",
-      appleMusic: "https://music.apple.com/mx/album/scaled-and-icy/1561836997",
+        "https://open.spotify.com/album/0Q5XBpCYFgUWiG9DUWyAmJ?si=8aN0uah1QTuH5BaLuFb4dA",
+      appleMusic: "https://music.apple.com/us/album/scaled-and-icy/1561836997",
     },
     tracks: [
       {
@@ -501,8 +501,8 @@ export const ALBUMS = [
     color: "#d33a35",
     links: {
       spotify:
-        "https://open.spotify.com/intl-es/album/1KFWgQTw3EMTQebaaepVBI?si=SjN5B6fBQEK82pGTqQeu2w",
-      appleMusic: "https://music.apple.com/mx/album/clancy/1733370881",
+        "https://open.spotify.com/album/1KFWgQTw3EMTQebaaepVBI?si=SjN5B6fBQEK82pGTqQeu2w",
+      appleMusic: "https://music.apple.com/us/album/clancy/1733370881",
     },
     tracks: [
       {
@@ -578,23 +578,22 @@ export const ALBUMS = [
     release: 2025,
     cover: "/covers/albums/breach.webp",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Breach serves as the explosive final chapter in Twenty One Pilots' decade-long narrative arc, directly following the cliffhanger of Clancy. The album chronicles the ultimate, high-stakes confrontation between the Banditos and the oppressive rulers of Dema, bringing the storyline of Vialism, the Nine Bishops, and the struggle for freedom to a definitive close. Sonically blending raw alternative rock, aggressive synth production, and intimate narrative songwriting, Breach explores themes of liberation, sacrifice, identity, and overcoming internal darkness. It delivers a cathartic conclusion for long-time fans, capturing the physical and emotional cost of breaking through Dema's walls while affirming that true resilience lies in unity, self-acceptance, and the courage to face one's deepest fears.",
     color: "#832525ff",
     links: {
-      spotify:
-        "https://open.spotify.com/prerelease/3EsYM7LoyJtJbdZYPx3N4U?si=5fa1e1499ef84756",
-      appleMusic: "https://music.apple.com/es/album/breach/1827507396",
+      spotify: "https://open.spotify.com/album/1El3k8dU3sKyoGUeuyrolH",
+      appleMusic: "https://music.apple.com/us/album/breach/1827507396",
     },
     tracks: [
       {
         id: 1,
         title: "City Walls",
-        duration: "Pending...",
+        duration: "5:22",
       },
       {
         id: 2,
         title: "RAWFEAR",
-        duration: "Pending...",
+        duration: "3:22",
       },
       {
         id: 3,
@@ -604,7 +603,7 @@ export const ALBUMS = [
       {
         id: 4,
         title: "Garbage",
-        duration: "Pending...",
+        duration: "3:16",
       },
       {
         id: 5,
@@ -614,42 +613,42 @@ export const ALBUMS = [
       {
         id: 6,
         title: "Downstairs",
-        duration: "Pending...",
+        duration: "5:26",
       },
       {
         id: 7,
         title: "Robot Voices",
-        duration: "Pending...",
+        duration: "3:57",
       },
       {
         id: 8,
         title: "Center Mass",
-        duration: "Pending...",
+        duration: "3:48",
       },
       {
         id: 9,
         title: "Cottonwood",
-        duration: "Pending...",
+        duration: "3:08",
       },
       {
         id: 10,
         title: "One Way",
-        duration: "Pending...",
+        duration: "2:43",
       },
       {
         id: 11,
         title: "Days Lie Dormant",
-        duration: "Pending...",
+        duration: "3:26",
       },
       {
         id: 12,
         title: "Tally",
-        duration: "Pending...",
+        duration: "3:32",
       },
       {
         id: 13,
         title: "Intentions",
-        duration: "Pending...",
+        duration: "2:15",
       },
     ],
   },
