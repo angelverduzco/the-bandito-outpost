@@ -14,11 +14,14 @@
 
 .game-result-modal {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 680px;
     max-height: calc(100vh - 3rem);
-    padding: 2.5rem;
-    overflow-y: auto;
+    max-height: calc(100dvh - 3rem);
+    padding: 1.75rem 2rem;
+    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
     background: linear-gradient(160deg, #2b2525 0%, #171717 60%, #121212 100%);
@@ -58,6 +61,7 @@
 }
 
 .game-result-new-record {
+    flex-shrink: 0;
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0.35rem 0.85rem;
@@ -71,17 +75,18 @@
 }
 
 .game-result-icon {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 1rem auto;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 0.85rem auto;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.06);
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .game-result-icon--record {
@@ -91,28 +96,31 @@
 }
 
 .game-result-title {
+    flex-shrink: 0;
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 1.85rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
 .game-result-description {
+    flex-shrink: 0;
     max-width: 500px;
-    margin: 0.75rem auto 0 auto;
+    margin: 0.6rem auto 0 auto;
     color: rgba(255, 255, 255, 0.72);
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 .game-result-stats {
+    flex-shrink: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin: 1.75rem 0;
+    gap: 0.6rem;
+    margin: 1.25rem 0;
 }
 
 .game-result-stat {
-    padding: 1rem 0.75rem;
+    padding: 0.75rem 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.04);
@@ -129,14 +137,15 @@
 
 .game-result-stat-value {
     display: block;
-    margin-top: 0.35rem;
-    font-size: 1.35rem;
+    margin-top: 0.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
 }
 
 .game-result-best {
-    padding: 1rem 1.25rem;
+    flex-shrink: 0;
+    padding: 0.75rem 1rem;
     border: 1px solid rgba(252, 227, 0, 0.18);
     border-radius: 12px;
     background: rgba(252, 227, 0, 0.05);
@@ -180,12 +189,17 @@
 }
 
 .game-result-missed {
-    margin-top: 1.5rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 1.25rem;
     text-align: left;
 }
 
 .game-result-section-title {
-    margin: 0 0 0.75rem 0;
+    flex-shrink: 0;
+    margin: 0 0 0.6rem 0;
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
     letter-spacing: 1px;
@@ -193,7 +207,9 @@
 }
 
 .game-result-missed-scroll {
-    max-height: 220px;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
     padding-right: 0.5rem;
     overflow-y: auto;
     scrollbar-color: rgba(252, 227, 0, 0.4) transparent;
@@ -226,12 +242,13 @@
 }
 
 .game-result-actions {
+    flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
 }
 
 .game-result-button {
@@ -289,16 +306,80 @@
 }
 
 @media (max-width: 560px) {
+    .game-result-overlay {
+        padding: 0.5rem;
+    }
+
     .game-result-modal {
-        padding: 1.75rem 1.25rem;
+        max-height: calc(100vh - 1rem);
+        max-height: calc(100dvh - 1rem);
+        padding: 1.25rem 1rem;
+    }
+
+    .game-result-new-record {
+        margin-bottom: 0.6rem;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    .game-result-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
     }
 
     .game-result-title {
-        font-size: 1.8rem;
+        font-size: 1.45rem;
+    }
+
+    .game-result-description {
+        margin-top: 0.4rem;
+        font-size: 0.83rem;
+        line-height: 1.45;
     }
 
     .game-result-stats {
-        grid-template-columns: 1fr;
+        gap: 0.4rem;
+        margin: 0.9rem 0;
+    }
+
+    .game-result-stat {
+        padding: 0.55rem 0.3rem;
+        border-radius: 10px;
+    }
+
+    .game-result-stat-label {
+        font-size: 0.56rem;
+        letter-spacing: 1px;
+    }
+
+    .game-result-stat-value {
+        margin-top: 0.2rem;
+        font-size: 0.95rem;
+    }
+
+    .game-result-best {
+        padding: 0.6rem 0.75rem;
+    }
+
+    .game-result-best-value {
+        margin-top: 0.25rem;
+        font-size: 0.85rem;
+    }
+
+    .game-result-improvement {
+        margin-top: 0.25rem;
+        font-size: 0.72rem;
+    }
+
+    .game-result-missed {
+        margin-top: 0.9rem;
+    }
+
+    .game-result-section-title {
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
     }
 
     .game-result-missed-group ul {
@@ -306,12 +387,21 @@
     }
 
     .game-result-actions {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-top: 1rem;
     }
 
-    .game-result-button,
+    .game-result-button {
+        flex: 1 1 0;
+        width: auto;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+
     .game-result-link {
-        width: 100%;
+        flex-basis: 100%;
         text-align: center;
     }
 }

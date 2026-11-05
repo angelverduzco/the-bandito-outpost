@@ -6,7 +6,7 @@ import { SongGuesser } from "../../components/Games/SongGuesser/SongGuesser";
 import "./GamePage.css";
 
 const GAME_COMPONENTS = {
-  "guess-the-songs": SongGuesser,
+  "discography-master": SongGuesser,
 };
 
 export function GamePage() {
