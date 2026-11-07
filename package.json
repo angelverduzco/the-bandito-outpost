@@ -7,6 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -14,6 +15,7 @@
         "@fortawesome/free-brands-svg-icons": "^6.7.2",
         "@fortawesome/free-solid-svg-icons": "^6.7.2",
         "@fortawesome/react-fontawesome": "^0.2.2",
+        "html-to-image": "^1.11.13",
         "playwright": "^1.55.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",

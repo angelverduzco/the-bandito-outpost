@@ -1,0 +1,914 @@
+.bracket-fight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 2rem 1.5rem 5rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.bracket-fight :focus-visible {
+  outline: 3px solid #FCE300;
+  outline-offset: 2px;
+}
+
+.bracket-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.85);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.bracket-topbar-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bracket-topbar-progress {
+  margin: 0.2rem 0 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+}
+
+.bracket-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bracket-button {
+  padding: 0.55rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #cb5252, #8f2929);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.bracket-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(203, 82, 82, 0.35);
+}
+
+.bracket-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.bracket-button--ghost {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: transparent;
+}
+
+.bracket-button--ghost:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.bracket-button--primary {
+  padding: 0.85rem 2rem;
+  font-size: 0.78rem;
+}
+
+.bracket-export-error {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(224, 60, 49, 0.5);
+  border-radius: 12px;
+  background: rgba(224, 60, 49, 0.12);
+  color: #ffb4ae;
+  font-size: 0.8rem;
+}
+
+.bracket-stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 8px;
+  row-gap: 0.75rem;
+}
+
+.bracket-side {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.bracket-side-track {
+  --bracket-gap: 16px;
+  display: flex;
+  align-items: stretch;
+  gap: var(--bracket-gap);
+  width: 100%;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+.bracket-round {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bracket-round-label {
+  margin-bottom: 0.6rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bracket-round-matches {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.bracket-match {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bracket-match::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: var(--bracket-gap);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.bracket-side--left .bracket-match::after {
+  left: 100%;
+}
+
+.bracket-side--full .bracket-match::after {
+  left: 100%;
+}
+
+.bracket-side--right .bracket-match::after {
+  right: 100%;
+}
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.42rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: linear-gradient(
+    150deg,
+    rgba(52, 46, 46, 0.92),
+    rgba(23, 23, 23, 0.96)
+  );
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.song-card--bracket {
+  width: 100%;
+  gap: 0.4rem;
+  padding: 0.35rem 0.4rem;
+}
+
+.song-card--bracket .song-card-cover {
+  width: clamp(20px, 26%, 40px);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.song-card--bracket .song-card-title {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.song-card-cover {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.song-card-info {
+  min-width: 0;
+  text-align: left;
+}
+
+.song-card-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.song-card-album {
+  display: block;
+  overflow: hidden;
+  margin-top: 0.15rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.6rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.song-card.is-winner {
+  border-color: rgba(252, 227, 0, 0.65);
+}
+
+.song-card.is-loser {
+  opacity: 0.38;
+}
+
+.song-card.is-active {
+  border-color: rgba(224, 60, 49, 0.7);
+}
+
+.song-card-check {
+  flex: none;
+  color: #FCE300;
+  font-size: 0.75rem;
+}
+
+.song-card--placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 46px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.song-card-placeholder-label {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bracket-arena {
+  flex: 1 1 100%;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 30;
+}
+
+.bracket-arena-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.25rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  background: linear-gradient(165deg, #2b2525, #141414 75%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.bracket-arena-round {
+  display: block;
+  color: #FCE300;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bracket-arena-sub {
+  margin: 0.4rem 0 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.76rem;
+}
+
+.bracket-arena-match {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.55rem;
+  align-items: stretch;
+  margin-top: 1rem;
+  animation: matchupIn 0.25s ease;
+}
+
+@keyframes matchupIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bracket-arena .song-card--arena {
+  flex-direction: column;
+  padding: 0.8rem 0.5rem;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.bracket-arena .song-card--arena:hover {
+  transform: translateY(-3px);
+  border-color: #FCE300;
+  background: rgba(252, 227, 0, 0.08);
+}
+
+.bracket-arena .song-card--arena .song-card-cover {
+  width: 84px;
+  height: 84px;
+  border-radius: 12px;
+}
+
+.bracket-arena .song-card--arena .song-card-title {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.bracket-arena .song-card--arena .song-card-album {
+  font-size: 0.62rem;
+}
+
+.arena-vs {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(224, 60, 49, 0.6);
+  border-radius: 50%;
+  background: #161616;
+  color: #E03C31;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.bracket-arena-hint {
+  display: block;
+  margin-top: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.bracket-arena-champion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: matchupIn 0.3s ease;
+}
+
+.bracket-champion-trophy {
+  margin-bottom: 0.5rem;
+  color: #FCE300;
+  font-size: 1.6rem;
+}
+
+.bracket-champion-cover {
+  width: 140px;
+  height: 140px;
+  margin-top: 0.9rem;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.bracket-champion-title {
+  margin: 0.8rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.bracket-champion-album {
+  margin: 0.3rem 0 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.bracket-arena-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1.1rem;
+}
+
+.bracket-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem 1rem;
+  box-sizing: border-box;
+}
+
+.bracket-setup-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.bracket-setup-header p {
+  max-width: 620px;
+  margin: 0.6rem 0 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.bracket-setup-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.bracket-chip {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.bracket-chip:hover {
+  border-color: #FCE300;
+  color: #FCE300;
+}
+
+.bracket-group {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.bracket-group-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.bracket-checkbox {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #cb5252;
+  cursor: pointer;
+}
+
+.bracket-group-name {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.bracket-group-count {
+  display: block;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.7rem;
+  letter-spacing: 0.8px;
+}
+
+.bracket-releases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.7rem;
+  padding: 1rem 1.25rem 1.25rem 1.25rem;
+}
+
+.bracket-release {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.5);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.bracket-release:hover {
+  border-color: rgba(252, 227, 0, 0.4);
+}
+
+.bracket-release.is-selected {
+  border-color: rgba(252, 227, 0, 0.55);
+  background: rgba(252, 227, 0, 0.06);
+}
+
+.bracket-release-cover {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.bracket-release-info {
+  min-width: 0;
+}
+
+.bracket-release-name {
+  display: block;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bracket-release-meta {
+  display: block;
+  margin-top: 0.1rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.65rem;
+  letter-spacing: 0.6px;
+}
+
+.bracket-setup-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.85);
+}
+
+.bracket-setup-count {
+  margin: 0;
+  color: #FCE300;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.bracket-setup-hint {
+  margin: 0.25rem 0 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+}
+
+.bracket-size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.bracket-size-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.bracket-size-option:hover:not(:disabled) {
+  border-color: rgba(252, 227, 0, 0.5);
+}
+
+.bracket-size-option.is-selected {
+  border-color: #FCE300;
+  background: rgba(252, 227, 0, 0.08);
+}
+
+.bracket-size-option:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.bracket-size-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.bracket-size-hint {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bracket-setup-start-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.bracket-setup-warning {
+  margin: 0;
+  color: #E03C31;
+  font-size: 0.72rem;
+}
+
+.bracket-export-surface {
+  position: fixed;
+  top: 0;
+  left: -20000px;
+  z-index: -1;
+  width: max-content;
+  padding: 40px;
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+.bracket-export-header {
+  max-width: 640px;
+}
+
+.bracket-export-kicker {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bracket-export-title {
+  margin: 0.4rem 0 0 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.bracket-export-meta {
+  margin: 0.3rem 0 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.bracket-export-champ-line {
+  margin: 0.2rem 0 0 0;
+  color: #FCE300;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.bracket-export-board {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  margin-top: 1.5rem;
+}
+
+.bracket-export-board .bracket-side {
+  flex: none;
+  padding: 0;
+}
+
+.bracket-export-board .bracket-side-track {
+  width: max-content;
+}
+
+.bracket-export-board .bracket-round {
+  flex: 0 0 176px;
+}
+
+.bracket-export-board .song-card--bracket .song-card-cover {
+  width: 40px;
+  height: 40px;
+}
+
+.bracket-export-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 200px;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.bracket-export-center-label {
+  margin-bottom: 0.4rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.bracket-export-champion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem 0.6rem;
+  border: 1px solid rgba(252, 227, 0, 0.5);
+  border-radius: 12px;
+  background: rgba(252, 227, 0, 0.06);
+}
+
+.bracket-export-champion-kicker {
+  color: #FCE300;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.bracket-export-champion-cover {
+  width: 72px;
+  height: 72px;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.bracket-export-champion-title {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bracket-export-champion-album {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.62rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 880px) {
+  .bracket-fight {
+    padding: 1.5rem 1rem 4rem 1rem;
+    gap: 1rem;
+  }
+
+  .bracket-topbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .bracket-arena {
+    position: sticky;
+    top: 0.5rem;
+    z-index: 40;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .bracket-arena-inner {
+    padding: 1rem 0.85rem;
+  }
+
+  .bracket-arena-match {
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  .bracket-arena .song-card--arena .song-card-cover {
+    width: 56px;
+    height: 56px;
+  }
+
+  .bracket-arena .song-card--arena .song-card-title {
+    font-size: 0.72rem;
+  }
+
+  .arena-vs {
+    width: 30px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
+
+  .bracket-champion-cover {
+    width: 110px;
+    height: 110px;
+  }
+
+  .bracket-arena-actions {
+    margin-top: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bracket-side--full {
+    flex: 1 1 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(252, 227, 0, 0.35) transparent;
+  }
+
+  .bracket-side-track {
+    width: max-content;
+  }
+
+  .bracket-round {
+    flex: 0 0 150px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bracket-arena-match,
+  .bracket-arena-champion {
+    animation: none;
+  }
+
+  .bracket-button,
+  .bracket-chip,
+  .bracket-release,
+  .bracket-size-option,
+  .bracket-arena .song-card--arena {
+    transition: none;
+  }
+
+  .bracket-button:hover:not(:disabled) {
+    transform: none;
+  }
+
+  .bracket-arena .song-card--arena:hover {
+    transform: none;
+  }
+}
