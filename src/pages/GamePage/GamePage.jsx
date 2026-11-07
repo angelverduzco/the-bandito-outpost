@@ -3,10 +3,12 @@ import { useParams } from "react-router";
 import { GAMES } from "../../data/games";
 import ButtonLink from "../../components/Button/ButtonLink";
 import { SongGuesser } from "../../components/Games/SongGuesser/SongGuesser";
+import { BracketFight } from "../../components/Games/BracketFight/BracketFight";
 import "./GamePage.css";
 
 const GAME_COMPONENTS = {
   "discography-master": SongGuesser,
+  "bracket-fight": BracketFight,
 };
 
 export function GamePage() {
