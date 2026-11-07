@@ -279,4 +279,125 @@ export const LIVE_ALBUMS = [
       },
     ],
   },
+  {
+    id: 4,
+    name: "More Than We Ever Imagined (Live in Mexico City)",
+    release: 2026,
+    cover: "/covers/live_albums/more-than-we-ever-imagined.webp",
+    description:
+      "More Than We Ever Imagined (Live in Mexico City) captures Twenty One Pilots' monumental headlining performance recorded in Mexico City. Released on August 7, 2026, the album features 21 dynamic live tracks spanning eras from their catalog, highlighting their grand arena presence and deep connection with fans.",
+    color: "#B8232D",
+    links: {
+      spotify: "https://open.spotify.com/album/7dUxfVqKIjBK0vqR1GxAjr",
+      appleMusic:
+        "https://music.apple.com/us/album/more-than-we-ever-imagined-live-in-mexico-city/6796494276",
+    },
+    tracks: [
+      {
+        id: 1,
+        title: "Overcompensate (Live in Mexico City)",
+        duration: "4:17",
+      },
+      {
+        id: 2,
+        title: "Holding On To You (Live in Mexico City)",
+        duration: "3:56",
+      },
+      {
+        id: 3,
+        title: "Vignette (Live in Mexico City)",
+        duration: "3:12",
+      },
+      {
+        id: 4,
+        title: "Car Radio (Live in Mexico City)",
+        duration: "5:05",
+      },
+      {
+        id: 5,
+        title: "Tear In My Heart (Live in Mexico City)",
+        duration: "3:22",
+      },
+      {
+        id: 6,
+        title: "Shy Away (Live in Mexico City)",
+        duration: "2:39",
+      },
+      {
+        id: 7,
+        title: "Heathens (Live in Mexico City)",
+        duration: "4:13",
+      },
+      {
+        id: 8,
+        title: "Next Semester (Live in Mexico City)",
+        duration: "3:55",
+      },
+      {
+        id: 9,
+        title: "Routines In The Night (Live in Mexico City)",
+        duration: "3:35",
+      },
+      {
+        id: 10,
+        title: "The Line (Live in Mexico City)",
+        duration: "3:37",
+      },
+      {
+        id: 11,
+        title: "Mulberry Street (Live in Mexico City)",
+        duration: "4:12",
+      },
+      {
+        id: 12,
+        title: "Navigating (Live in Mexico City)",
+        duration: "3:40",
+      },
+      {
+        id: 13,
+        title: "Nico/Heavydirtysoul (Live in Mexico City)",
+        duration: "7:02",
+      },
+      {
+        id: 14,
+        title: "Guns For Hands (Live in Mexico City)",
+        duration: "4:02",
+      },
+      {
+        id: 15,
+        title: "Lavish (Live in Mexico City)",
+        duration: "2:47",
+      },
+      {
+        id: 16,
+        title: "Ride (Live in Mexico City)",
+        duration: "4:21",
+      },
+      {
+        id: 17,
+        title: "Paladin Strait (Live in Mexico City)",
+        duration: "5:03",
+      },
+      {
+        id: 18,
+        title: "Jumpsuit (Live in Mexico City)",
+        duration: "3:50",
+      },
+      {
+        id: 19,
+        title: "Midwest Indigo (Live in Mexico City)",
+        duration: "3:52",
+      },
+      {
+        id: 20,
+        title: "Stressed Out (Live in Mexico City)",
+        duration: "3:33",
+      },
+      {
+        id: 21,
+        title: "Trees (Live in Mexico City)",
+        duration: "5:41",
+      },
+    ],
+  },
 ];
